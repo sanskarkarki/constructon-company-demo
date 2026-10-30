@@ -1,0 +1,19 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight, Check } from "lucide-react";
+export const metadata: Metadata = { title: "About us", description: "Learn about the principles and approach behind Karki Bandhu Construction." };
+const principles = [
+  ["01", "Built on trust", "We believe good projects begin with honest conversations, clear expectations, and accountability at every stage."],
+  ["02", "Details matter", "The quality of a finished space is shaped by hundreds of decisions. We take each one seriously."],
+  ["03", "Made for the long term", "We look beyond handover, considering durability, practical use, and how a space will age."],
+];
+export default function AboutPage() {
+  return <>
+    <section className="container pb-16 pt-20 md:pb-24 md:pt-28"><p className="eyebrow">Who we are</p><h1 className="display mt-7 max-w-5xl text-6xl md:text-8xl">Good spaces start<br/>with <span className="gold italic">good thinking.</span></h1><p className="mt-8 max-w-2xl text-sm leading-7 text-white/60 md:text-base">Karki Bandhu Construction brings a considered, people-first approach to building. Our focus is simple: thoughtful planning, reliable execution, and spaces that keep serving the people who use them.</p></section>
+    <div className="relative h-[360px] md:h-[580px]" data-image-reveal><Image src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90" alt="Modern architecture with natural stone and considered proportions" fill priority sizes="100vw" className="image-cover"/></div>
+    <section className="section-pad bg-[#f1efe8] text-[#171916]"><div className="container grid gap-10 md:grid-cols-[.8fr_1.2fr]"><div><p className="eyebrow">Our point of view</p><h2 className="display mt-6 text-5xl md:text-6xl">Construction is a <span className="italic text-[#a17b42]">relationship.</span></h2></div><div><p className="text-base leading-8 text-black/65">A successful project is not only measured in concrete, steel, or square metres. It is measured in how well the team works together, how clearly decisions are made, and how confidently the client can move forward.</p><p className="mt-5 text-base leading-8 text-black/65">That is the standard we aim to bring to every project, whether it is a new home, a commercial space, or a carefully planned renovation.</p><Link href="/contact" className="mt-8 inline-flex items-center gap-3 border-b border-black/30 pb-3 text-[10px] font-bold uppercase tracking-[.15em]">Work with us <ArrowUpRight size={15}/></Link></div></div></section>
+    <section className="section-pad"><div className="container"><p className="eyebrow">What guides us</p><h2 className="display mb-12 mt-5 text-5xl md:text-7xl">Principles over <span className="gold italic">promises.</span></h2><div className="grid gap-0 border-t border-white/15 md:grid-cols-3 md:gap-8">{principles.map(([n,t,d])=><article key={n} className="border-b border-white/15 py-7 md:border-b-0 md:py-8" data-reveal><span className="text-xs text-[#c5a46d]">{n}</span><h3 className="mt-7 font-serif text-3xl">{t}</h3><p className="mt-4 text-sm leading-7 text-white/55">{d}</p></article>)}</div></div></section>
+    <section className="bg-[#222520] py-16 md:py-20"><div className="container grid gap-8 md:grid-cols-[1fr_auto] md:items-center"><div><p className="eyebrow">A thoughtful process</p><h2 className="display mt-5 text-4xl md:text-6xl">Clear at every stage.</h2><p className="mt-4 max-w-xl text-sm leading-7 text-white/55">From early conversations and scope definition to coordination and handover, the process should feel considered and transparent.</p></div><Link href="/services" className="btn">Explore our services <ArrowUpRight size={15}/></Link></div></section>
+  </>;
+}

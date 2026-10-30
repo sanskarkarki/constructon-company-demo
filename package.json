@@ -1,0 +1,30 @@
+{
+  "name": "karki-bandhu-construction",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "gsap": "^3.13.0",
+    "lucide-react": "^0.468.0",
+    "next": "^15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.14",
+    "@tailwindcss/postcss": "^4.0.14",
+    "framer-motion": "^12.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "^15.2.4",
+    "typescript": "^5.8.2"
+  }
+}
